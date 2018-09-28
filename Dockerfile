@@ -2,4 +2,4 @@ FROM boxfuse/flyway
 WORKDIR /src
 
 COPY . .
-ENTRYPOINT [ "flyway", "-configFiles=conf/flyway.conf", "migrate" ]
+ENTRYPOINT [ "flyway", "migrate", "-url=jdbc:sqlite:/app/test.db", "-locations=filesystem:migrations" ]
