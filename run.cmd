@@ -1,0 +1,1 @@
+docker run --rm --mount source=migrationtest-sqlitedb,target=/app --name test-sqlitedb test-sqlitedb
